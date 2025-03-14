@@ -1,0 +1,36 @@
+[
+  {
+    "title":"Python Crash Course",
+    "auther":"Eric Matthes",
+    "publication_year":"2019",
+    "genre":"Programming",
+    "read_status":false,
+    "added_data":"2025-3-11 11:36:40"
+  },
+  {
+    "title":"Typescript Crash Course",
+    "auther":"Eric Almo",
+    "publication_year":"2019",
+    "genre":"Programming",
+    "read_status":true,
+    "added_data":"2025-3-11 11:36:30"
+  },
+  {
+    "title":"Fluent Python",
+    "auther":"Stric Matthes",
+    "publication_year":"2022",
+    "genre":"Programming",
+    "read_status":false,
+    "added_data":"2025-3-11 11:36:45"
+  },
+  {
+    "title":"Effective Python",
+    "auther":"Eric Monngo",
+    "publication_year":"2023",
+    "genre":"Programming",
+    "read_status":false,
+    "added_data":"2025-3-11 11:36:55"
+  }
+]  
+  
+    
