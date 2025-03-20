@@ -115,10 +115,11 @@ if "current_view" not in st.session_state:
 # Function to load the library data
 def load_library():
     try:
-        if os.path.exists("library.json"):
-            with open("library.json", "r") as file:
+        if os.path.exists('library.json'):
+            with open('library.json', 'r') as file:
                 st.session_state.Library = json.load(file)
-        return True
+                return True
+        return False
     except Exception as e:
         st.error(f"Error loading library: {e}")
         return False
@@ -126,7 +127,7 @@ def load_library():
 # Save library data
 def save_library():
     try:
-        with open("library.json", "w") as file:
+        with open('library.json', 'w') as file:
             json.dump(st.session_state.Library, file)
         return True
     except Exception as e:
