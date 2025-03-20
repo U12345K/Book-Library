@@ -225,6 +225,25 @@ def create_visualizations(stats):
             height=400
         )
         st.plotly_chart(fig_genres, use_container_width=True)
+    if stats['decades']:
+        decades_df = pd.DataFrame({
+            'Decade': [f"{decade}s" for decade in stats['decades'].keys()],
+            'Count': list(stats['decades'].values())
+        })
+        fig_decades = px.line(
+            decades_df,
+            x='Decade',
+            y='Count',
+            markers=True,
+            line_shape='spline',
+        )
+        fig_decades.update_layout(
+            title_text='Books by Decade',
+            xaxis_title='Decade',
+            yaxis_title='Number of Books',
+            height=400
+        )
+        st.plotly_chart(fig_decades, use_container_width=True)
 
 # Load library data
 load_library()
@@ -405,4 +424,3 @@ elif st.session_state.current_view == "stats":
 
 st.markdown("---")
 st.markdown("Developed by UMAR KHAN", unsafe_allow_html=True)
-
